@@ -28,3 +28,27 @@ def test_bubble_sort_invalid():
     result = Lab3.bubble_sort(input_arr, 3)
 
     assert (result == [])
+
+def test_bubble_number_exced():
+    result = []
+    input_arr = [64, 34, 25, 12, 22, 11, 90, 69, 71, 23, 35]
+
+    result = Lab3.bubble_sort(input_arr, Lab3.SORT_DESCENDING)
+
+    assert (result == 1)
+
+def test_bubble_number_none():
+    result = []
+    input_arr = []
+
+    result = Lab3.bubble_sort(input_arr, Lab3.SORT_DESCENDING)
+
+    assert (result == 0)
+
+def test_bubble_number_invalid():
+    result = []
+    input_arr = [69, 25, 17, 1.5]
+
+    result = Lab3.bubble_sort(input_arr, Lab3.SORT_DESCENDING)
+
+    assert (result == 2)
